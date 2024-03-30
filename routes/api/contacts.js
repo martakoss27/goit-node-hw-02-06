@@ -1,9 +1,9 @@
 import express from "express";
-import { indexContacts } from "../../controllers/contacts/indexContacts";
-import { showContacts } from "../../controllers/contacts/showContacts";
-import { createContacts } from "../../controllers/contacts/createContacts";
-import { updateContacts } from "../../controllers/contacts/updateContacts";
-import { deleteContacts } from "../../controllers/contacts/deleteContacts";
+import { indexContacts } from "../../controllers/contacts/indexContacts.js";
+import { showContacts } from "../../controllers/contacts/showContacts.js";
+import { createContacts } from "../../controllers/contacts/createContacts.js";
+import { updateContacts } from "../../controllers/contacts/updateContacts.js";
+import { deleteContacts } from "../../controllers/contacts/deleteContacts.js";
 
 const router = express.Router();
 

@@ -1,8 +1,11 @@
-const express = require("express");
-const logger = require("morgan");
-const cors = require("cors");
+//const express = require("express");
+//const logger = require("morgan");
+//const cors = require("cors");
+import express from "express";
+import logger from "morgan";
+import cors from "cors";
 
-import { router as contactsRouter } from "./routes/api/contacts";
+import { router as contactsRouter } from "./routes/api/contacts.js";
 
 const app = express();
 

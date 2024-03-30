@@ -1,4 +1,4 @@
-import { updateContact } from "../../models/contacts";
+import { updateContact } from "../../models/contacts.js";
 import Joi from "@hapi/joi";
 
 const schemaSecond = Joi.object({
