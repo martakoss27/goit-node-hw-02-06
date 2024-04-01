@@ -1,8 +1,7 @@
-//const fs = require('fs/promises')
 import fs from "fs/promises";
 import path from "path";
 
-const contactsPtah = path.join(process.cwd(), "/models/contacts.json");
+const contactsPath = path.join(process.cwd(), "/models/contacts.json");
 
 const listContacts = async () => {
   try {
