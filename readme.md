@@ -1,14 +1,36 @@
-## GoIT Node.js Course Template Homework
+# goit-node-hw-02
 
-Please fork this repository to complete your homework assignments (2-6).
-Forking will create a repository on your http://github.com account.
+## DEMO
 
-## Expalanation Recording to hanle homeworks in the Node.js Block
-[Watch the video](https://www.loom.com/share/007c97d271604e02ae61adbb5b69edd3)
+GET `http://localhost:3000/api/contacts`
+![alt text](./images/GetList.png "getList")
 
-### Commands:
+GETbyID `http://localhost:3000/api/contacts/CONTACT_ID`
+![alt text](./images/GetById.png "getById")
 
-- `npm start` &mdash; starts the server in production mode.
-- `npm run start:dev` &mdash; starts the server in development mode.
-- `npm run lint` &mdash; runs eslint to check the code. Make sure to execute this before each PR and fix all linting errors.
-- `npm lint:fix` &mdash; same as the previous command but fixes simple linting errors automatically.
+POST
+![alt text](./images/Post.png "post")
+
+PUT
+![alt text](./images/Put.png "put")
+
+DELETE
+![alt text](./images/Delete.png "delete")
+
+## Technologies used
+
+- Node
+- JavaScript
+
+## Setup and Usage
+
+Clone this repo to your desktop and run `npm install` to install all the
+dependencies. Once the dependencies are installed, you can run `npm run start:dev`
+
+Open your browser or postman and check all available methods and endpoint's
+
+- GET (contacts) : http://localhost:3000/api/contacts
+- GET (find contact by id) : http://localhost:3000/api/contacts/CONTACT_ID
+- POST (add new contact with json) : http://localhost:3000/api/contacts/
+- PUT (update contact with json) : http://localhost:3000/api/contacts/CONTACT_ID
+- DELETE (remove contact with unique id) : http://localhost:3000/api/contacts/CONTACT_ID
