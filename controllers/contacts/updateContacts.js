@@ -1,7 +1,7 @@
 import { updateContact } from "../../models/contacts.js";
 import Joi from "@hapi/joi";
 
-const schemaSecond = Joi.object({
+const contactsSchema = Joi.object({
   name: Joi.string(),
   email: Joi.string().email({
     minDomainSegments: 2,
@@ -12,7 +12,7 @@ const schemaSecond = Joi.object({
 
 async function updateContacts(req, res, next) {
   try {
-    const result = schemaSecond.validate(req.body);
+    const result = contactsSchema.validate(req.body);
     if (result.error) {
       return res.status(400).json({ message: result.error.message });
     }

@@ -9,7 +9,7 @@ const listContacts = async () => {
     const contacts = JSON.parse(fileContent);
     return contacts;
   } catch (error) {
-    return JSON.parse(error.message);
+    throw error.message;
   }
 };
 

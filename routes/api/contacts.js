@@ -1,5 +1,5 @@
 import express from "express";
-import { indexContacts } from "../../controllers/contacts/indexContacts.js";
+import { getContacts } from "../../controllers/contacts/getContacts.js";
 import { showContacts } from "../../controllers/contacts/showContacts.js";
 import { createContacts } from "../../controllers/contacts/createContacts.js";
 import { updateContacts } from "../../controllers/contacts/updateContacts.js";
@@ -7,7 +7,7 @@ import { deleteContacts } from "../../controllers/contacts/deleteContacts.js";
 
 const router = express.Router();
 
-router.get("/", indexContacts);
+router.get("/", getContacts);
 
 router.get("/:contactId", showContacts);
 

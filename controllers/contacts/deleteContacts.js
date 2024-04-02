@@ -11,7 +11,7 @@ async function deleteContacts(req, res, next) {
       res.status(200).json({ message: "Contact deleted" });
     }
   } catch (error) {
-    res.status(500).json(`An error occured: ${error}`);
+    console.log(error);
   }
 }
 

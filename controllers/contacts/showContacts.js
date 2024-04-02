@@ -11,7 +11,7 @@ async function showContacts(req, res, next) {
       res.status(200).json(contact);
     }
   } catch (error) {
-    res.status(500).json(`An error occured: ${error}`);
+    next(new Error(`An error occured: ${error}`));
   }
 }
 
