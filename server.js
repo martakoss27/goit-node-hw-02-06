@@ -5,9 +5,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
-const uriDB = process.env.DB_HOST;
+const urlDB = process.env.DB_HOST;
 
-const connection = mongoose.connect(uriDB);
+const connection = mongoose.connect(urlDB);
 
 connection
   .then(() => {
@@ -18,6 +18,7 @@ connection
   })
   .catch((error) => {
     console.log(`Server not running. Error message: ${error.message}`);
+    process.exit(1);
   });
 
 //app.listen(3000, () => {
