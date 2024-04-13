@@ -8,13 +8,13 @@ GET `http://localhost:3000/api/contacts`
 GETbyID `http://localhost:3000/api/contacts/CONTACT_ID`
 ![alt text](./images/GetById.png "getById")
 
-POST
+POST `http://localhost:3000/api/contacts`
 ![alt text](./images/Post.png "post")
 
-PUT
+PUT `http://localhost:3000/api/contacts/CONTACT_ID`
 ![alt text](./images/Put.png "put")
 
-DELETE
+DELETE `http://localhost:3000/api/contacts/CONTACT_ID`
 ![alt text](./images/Delete.png "delete")
 
 ## Technologies used
