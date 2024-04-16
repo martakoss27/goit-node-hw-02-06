@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import { getUserByEmail, updateUser } from "../../service/index.js";
 
-async function logIn(req, res, next) {
+async function login(req, res, next) {
   const { email, password } = req.body;
   const user = await getUserByEmail(email);
 
@@ -33,4 +33,4 @@ async function logIn(req, res, next) {
   }
 }
 
-export { logIn };
+export { login };

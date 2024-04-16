@@ -1,4 +1,5 @@
 import { createUser, getUserByEmail } from "../../service/index.js";
+import { schema } from "../../validation/validation.js";
 
 async function signUp(req, res, next) {
   const { email, password } = req.body;
@@ -8,8 +9,9 @@ async function signUp(req, res, next) {
     return res.status(409).json({ message: "Email in use" });
   }
 
-  if (!password || !email) {
-    return res.status(400).json({ message: "Email and password required" });
+  const { error } = schema.validate(req.body);
+  if (error) {
+    return res.status(400).json({ message: error.details[0].message });
   }
 
   try {

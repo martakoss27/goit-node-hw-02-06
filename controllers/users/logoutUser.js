@@ -1,6 +1,6 @@
 import { updateUser } from "../../service/index.js";
 
-async function logOut(req, res, next) {
+async function logout(req, res, next) {
   if (res.user.length === 0) {
     return res.status(401).json({ message: "Not authorized" });
   }
@@ -12,4 +12,4 @@ async function logOut(req, res, next) {
   return res.status(204).json({ message: "logged out" });
 }
 
-export { logOut };
+export { logout };
