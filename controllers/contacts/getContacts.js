@@ -5,16 +5,16 @@ async function getContacts(req, res, next) {
 
   try {
     const results = await getAllContacts();
-    const newResults = results.filter((contact) =>
-      contact.owner.equals(user._id)
-    );
+    //const newResults = results.filter((contact) =>
+    //contact.owner.equals(user._id)
+    //);
 
     return res.json({
       status: "succes",
       code: 200,
       data: {
-        contacts: newResults,
-        contactsCount: newResults.length,
+        contacts: results,
+        contactsCount: results.length,
       },
     });
   } catch (error) {
