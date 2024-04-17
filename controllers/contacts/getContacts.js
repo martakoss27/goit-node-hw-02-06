@@ -8,6 +8,7 @@ async function getContacts(req, res, next) {
     const newResults = results.filter((contact) =>
       contact.owner.equals(user._id)
     );
+
     return res.json({
       status: "succes",
       code: 200,
