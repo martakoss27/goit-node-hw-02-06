@@ -1,5 +1,7 @@
 import { Contact } from "./schemas/contacts.js";
 import { User } from "./schemas/users.js";
+import getAvatar from "../handlers/getAvatar.js";
+import { uuid } from "uuidv4";
 
 const getAllContacts = async () => {
   return Contact.find();
@@ -35,8 +37,17 @@ const getUserById = async (id) => {
   return User.find({ _id: id });
 };
 
+const getUserByVerToken = async (token) => {
+  return User.findOne({ verificationToken: token });
+};
+
 const createUser = async ({ email, password }) => {
-  const newUser = new User({ email });
+  const verificationToken = uuid();
+  const newUser = new User({
+    email,
+    avatarURL: getAvatar(email),
+    verificationToken,
+  });
   await newUser.setPassword(password);
   await newUser.save();
   return newUser;
@@ -57,4 +68,5 @@ export {
   getUserById,
   createUser,
   updateUser,
+  getUserByVerToken,
 };
